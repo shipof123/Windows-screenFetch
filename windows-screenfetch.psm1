@@ -16,6 +16,8 @@ Function Screenfetch($distro)
         ([string]::Compare($distro, "osx", $true) -eq 0)) {
             
         $AsciiArt = . Get-MacArt;
+    } else if ([string]::Compare($distro, "Arch", $true) -eq 0)){
+        $AsciiArt = . Get-ArchArt;
     }
     else 
     {
